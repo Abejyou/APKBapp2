@@ -9,9 +9,9 @@ public class LoginViewModel extends ViewModel {
     private MutableLiveData<String> mText;
 
     public LoginViewModel() {
-        System.out.println( "TESTE VIEW MODEL" );
         mText = new MutableLiveData<>();
-        mText.setValue( "This is login fragment" );
+        mText.setValue(""  );
+
     }
 
     public LiveData<String> getText() {
