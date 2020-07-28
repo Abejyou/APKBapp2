@@ -16,15 +16,15 @@ import com.example.apkbapp2.R;
 
 public class GaleriaFragment extends Fragment {
 
-    private GaleriaViewModel notificationsViewModel;
+    private GaleriaViewModel galeriaViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
+        galeriaViewModel =
                 ViewModelProviders.of( this ).get( GaleriaViewModel.class );
-        View root = inflater.inflate( R.layout.fragment_notifications, container, false );
-        final TextView textView = root.findViewById( R.id.text_notifications );
-        notificationsViewModel.getText().observe( getViewLifecycleOwner(), new Observer<String>() {
+        View root = inflater.inflate( R.layout.fragment_galeria, container, false );
+        final TextView textView = root.findViewById( R.id.text_galeria );
+        galeriaViewModel.getText().observe( getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText( s );

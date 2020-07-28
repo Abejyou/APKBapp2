@@ -41,6 +41,9 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
         usuario.setNomeUsuario( edtUsuario.getText().toString() );
         usuario.setSenha( edtSenha.getText().toString() );
         usuarioHelper.inserirUsuario( usuario );
+        System.out.println( usuario.nome );
+        //Intent it = new Intent( this, LoginFragment.class );
+        System.out.println( this );
         Intent it = new Intent( this, LoginFragment.class );
         startActivity( it );
     }
